@@ -378,7 +378,7 @@ body.dark .navbar.scrolled .hamburger span {
 
 /* About Section */
 .about-section {
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 .about-section h2 {
@@ -564,11 +564,14 @@ body.dark .theme-toggle .fa-moon {
     font-size: 1.1rem;
   }
 
-  .about-section,
   .rooms-teaser,
   .video-section,
   .testimonials {
     padding: 60px 0;
+  }
+
+  .about-section {
+    padding: 60px 20px;
   }
 
   .about-section h2 {
