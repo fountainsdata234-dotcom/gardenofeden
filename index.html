@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Garden of Eden offers luxury accommodations with classic, premium, deluxe, and executive rooms. Experience top facilities, stunning views, and exceptional service in Nigeria. Book now for an unforgettable stay."
+    />
+    <meta
+      name="keywords"
+      content="luxury hotel Nigeria, premium rooms, deluxe suites, executive hotel, hotel booking, hotel facilities, hotel gallery, spa hotel, fine dining, Garden of Eden, Eden, Garden"
+    />
+    <meta
+      property="og:title"
+      content="Garden of Eden - Luxury Hotel in Nigeria"
+    />
+    <meta
+      property="og:description"
+      content="Discover world-class luxury at Garden of Eden with premium rooms and amenities. Book your stay today."
+    />
+    <meta property="og:image" content="images/og-home.jpg" />
+    <meta property="og:url" content="https://yourhotel.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Garden of Eden - Luxury Accommodations in Nigeria</title>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header with Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <img
+              src="image.jpg"
+              alt="Garden of Eden Logo"
+              style="
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu (Links + Actions) -->
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li><a href="room.html" class="nav-link">Rooms</a></li>
+              <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+              <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+            </ul>
+
+            <!-- Actions -->
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="book.html" class="nav-book-btn">Book Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section with Advanced Carousel -->
+    <section class="hero-section">
+      <div class="swiper hero-carousel">
+        <div class="swiper-wrapper">
+          <!-- Photo Slide 1 -->
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          >
+            <div class="hero-content">
+              <h1 data-aos="fade-down">Welcome to Paradise</h1>
+              <p data-aos="fade-up" data-aos-delay="200">
+                Discover luxury like never before with our exquisite rooms and
+                amenities.
+              </p>
+              <a
+                href="book.html"
+                class="hero-btn"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                >Book Your Stay</a
+              >
+            </div>
+          </div>
+          <!-- Video Slide -->
+          <div class="swiper-slide video-slide">
+            <video autoplay loop muted playsinline class="hero-video">
+              <source
+                src="Warm Smoke Flow Overlay for Luxurious Title Animation.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="hero-content">
+              <h1 data-aos="fade-down">Elegant Comfort Awaits</h1>
+              <p data-aos="fade-up" data-aos-delay="200">
+                Step into a world of sophistication and relaxation.
+              </p>
+              <a
+                href="rooms.html"
+                class="hero-btn"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                >Explore Rooms</a
+              >
+            </div>
+          </div>
+          <!-- Photo Slide 2 -->
+          <div
+            class="swiper-slide"
+            style="
+              background-image: url('https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            "
+          >
+            <div class="hero-content">
+              <h1 data-aos="fade-down">Unwind in Style</h1>
+              <p data-aos="fade-up" data-aos-delay="200">
+                Our facilities are designed for ultimate indulgence.
+              </p>
+              <a
+                href="facilities.html"
+                class="hero-btn"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                >See Facilities</a
+              >
+            </div>
+          </div>
+          <!-- Another Video Slide -->
+          <div class="swiper-slide video-slide">
+            <video autoplay loop muted playsinline class="hero-video">
+              <source
+                src="Warm Smoke Flow Overlay for Luxurious Title Animation.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div class="hero-content">
+              <h1 data-aos="fade-down">Captivating Views</h1>
+              <p data-aos="fade-up" data-aos-delay="200">
+                Enjoy breathtaking vistas from every corner.
+              </p>
+              <a
+                href="gallery.html"
+                class="hero-btn"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                >View Gallery</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>About Your Hotel Name</h2>
+      </div>
+      <div class="about-container">
+        <div class="about-img-wrapper" data-aos="fade-right">
+          <img
+            src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Hotel Interior"
+          />
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <h3>Experience the Extraordinary</h3>
+          <p style="margin-bottom: 1.5rem; line-height: 1.8">
+            Located in the heart of Nigeria, Your Hotel Name is a beacon of
+            luxury and comfort. We offer an unparalleled experience blending
+            modern elegance with traditional hospitality. Whether you are here
+            for business or leisure, our commitment to excellence ensures a
+            memorable stay.
+          </p>
+          <ul style="list-style: none; margin-bottom: 2rem">
+            <li style="margin-bottom: 0.5rem">
+              <i
+                class="fas fa-check-circle"
+                style="color: var(--primary); margin-right: 10px"
+              ></i>
+              Award-winning Service
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <i
+                class="fas fa-check-circle"
+                style="color: var(--primary); margin-right: 10px"
+              ></i>
+              24/7 Concierge Support
+            </li>
+            <li style="margin-bottom: 0.5rem">
+              <i
+                class="fas fa-check-circle"
+                style="color: var(--primary); margin-right: 10px"
+              ></i>
+              Sustainable Practices
+            </li>
+          </ul>
+          <a href="blog.html" class="btn">Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Amenities Section (New) -->
+    <section class="amenities-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>World Class Amenities</h2>
+          <p>Everything you need for a perfect stay</p>
+        </div>
+        <div class="amenities-grid">
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-swimming-pool"></i>
+            <h3>Infinity Pool</h3>
+            <p>Relax with a stunning view.</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-spa"></i>
+            <h3>Luxury Spa</h3>
+            <p>Rejuvenate your body and mind.</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-utensils"></i>
+            <h3>Fine Dining</h3>
+            <p>Exquisite culinary delights.</p>
+          </div>
+          <div class="amenity-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-wifi"></i>
+            <h3>High-Speed Wifi</h3>
+            <p>Stay connected everywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Rooms Teaser -->
+    <section class="rooms-teaser" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Rooms</h2>
+        </div>
+        <div class="rooms-grid">
+          <div class="room-card" data-aos="flip-left">
+            <img
+              src="https://images.pexels.com/photos/271619/pexels-photo-271619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Classic Room"
+            />
+            <h3>Classic Room</h3>
+            <p>Cozy and affordable luxury starting at ₦50,000/night</p>
+            <a href="rooms.html#classic" class="btn">Learn More</a>
+          </div>
+          <div class="room-card" data-aos="flip-up" data-aos-delay="200">
+            <img
+              src="https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Premium Room"
+            />
+            <h3>Premium Room</h3>
+            <p>Elevated comfort with views starting at ₦80,000/night</p>
+            <a href="rooms.html#premium" class="btn">Learn More</a>
+          </div>
+          <div class="room-card" data-aos="flip-right" data-aos-delay="400">
+            <img
+              src="https://images.pexels.com/photos/237371/pexels-photo-237371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Deluxe Suite"
+            />
+            <h3>Deluxe Suite</h3>
+            <p>Spacious elegance starting at ₦120,000/night</p>
+            <a href="rooms.html#deluxe" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section (New) -->
+    <section class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <h3 class="counter" data-target="10">0</h3>
+          <p>Years of Excellence</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="counter" data-target="250">0</h3>
+          <p>Luxury Rooms</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="counter" data-target="50000">0</h3>
+          <p>Happy Guests</p>
+        </div>
+        <div class="stat-item">
+          <h3 class="counter" data-target="15">0</h3>
+          <p>Awards Won</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Clip Section -->
+    <section class="video-section" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Take a Virtual Tour</h2>
+        </div>
+        <div class="video-grid">
+          <div class="video-container" data-aos="zoom-in">
+            <video autoplay loop muted playsinline>
+              <source
+                src="Warm Smoke Flow Overlay for Luxurious Title Animation.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Hotel Entrance</p>
+          </div>
+          <div class="video-container" data-aos="zoom-in" data-aos-delay="200">
+            <video autoplay loop muted playsinline>
+              <source
+                src="Warm Smoke Flow Overlay for Luxurious Title Animation.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Luxury Room Tour</p>
+          </div>
+          <div class="video-container" data-aos="zoom-in" data-aos-delay="400">
+            <video autoplay loop muted playsinline>
+              <source
+                src="Warm Smoke Flow Overlay for Luxurious Title Animation.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <p>Infinity Pool</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax CTA (New) -->
+    <section class="cta-section">
+      <div class="container cta-content" data-aos="zoom-in">
+        <h2>Ready for the Experience of a Lifetime?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem">
+          Book your stay today and enjoy exclusive online discounts.
+        </p>
+        <a href="book.html" class="hero-btn">Book Now</a>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Our Guests Say</h2>
+        </div>
+        <!-- Swiper for Testimonials -->
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide testimonial-card-new">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "An amazing stay! The rooms are impeccable and the staff is
+                incredible. Truly a 5-star experience."
+              </p>
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="John"
+                class="user-img"
+              />
+              <h4>John Doe</h4>
+            </div>
+            <div class="swiper-slide testimonial-card-new">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "Luxury at its finest. The facilities exceeded our expectations.
+                The spa was heavenly."
+              </p>
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Jane"
+                class="user-img"
+              />
+              <h4>Jane Smith</h4>
+            </div>
+            <div class="swiper-slide testimonial-card-new">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "Perfect location and service. We'll be back! The food was
+                absolutely delicious."
+              </p>
+              <img
+                src="https://randomuser.me/api/portraits/men/85.jpg"
+                alt="Michael"
+                class="user-img"
+              />
+              <h4>Michael Johnson</h4>
+            </div>
+            <div class="swiper-slide testimonial-card-new">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "An amazing stay! The rooms are impeccable and the staff is
+                incredible. Truly a 5-star experience."
+              </p>
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="John"
+                class="user-img"
+              />
+              <h4>John Doe</h4>
+            </div>
+            <div class="swiper-slide testimonial-card-new">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                "Luxury at its finest. The facilities exceeded our expectations.
+                The spa was heavenly."
+              </p>
+              <img
+                src="https://randomuser.me/api/portraits/women/44.jpg"
+                alt="Jane"
+                class="user-img"
+              />
+              <h4>Jane Smith</h4>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Your Hotel Name. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

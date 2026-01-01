@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Eden Journal | Proportional Design</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      :root {
+        --primary: #1a4a31;
+        --gold: #c5a059;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fdfdfb;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+
+      /* CONTROLLED PROPORTIONS LOGIC */
+
+      /* Mobile: Elements are neat squares, 75% width of screen */
+      @media (max-width: 768px) {
+        .eden-card {
+          width: 75% !important;
+          margin: 0 auto;
+          aspect-ratio: 1 / 1; /* FORCES SQUARE SHAPE */
+        }
+        .eden-img-container {
+          width: 80% !important;
+          aspect-ratio: 1 / 1 !important;
+          margin: 0 auto;
+        }
+        .map-landscape {
+          width: 100% !important;
+          aspect-ratio: 3 / 2 !important;
+          height: auto !important;
+        }
+      }
+
+      /* Desktop: Standard proportions */
+      @media (min-width: 769px) {
+        .eden-card {
+          aspect-ratio: auto;
+        }
+        .eden-img-container {
+          aspect-ratio: 4 / 5;
+        }
+        .map-landscape {
+          width: 100% !important;
+          max-width: 1200px;
+          height: 600px !important;
+        }
+      }
+
+      /* Swiper Smoothness */
+      .swiper-slide {
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: opacity 0.6s ease;
+        opacity: 0.4;
+      }
+      .swiper-slide-active {
+        opacity: 1;
+      }
+
+      .btn-gold {
+        background: linear-gradient(135deg, #c5a059, #ab8b4a);
+        box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <img
+              src="image.jpg"
+              alt="Garden of Eden Logo"
+              style="
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu (Links + Actions) -->
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="room.html" class="nav-link">Rooms</a></li>
+              <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+              <li><a href="facilities.html" class="nav-link">Facilities</a></li>
+            </ul>
+
+            <!-- Actions -->
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="book.html" class="nav-book-btn">Book Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 1. INTRO / LOGO ENCLAVE -->
+    <section class="py-16 text-center mt-20">
+      <div
+        class="w-32 h-32 md:w-40 md:h-40 bg-white shadow-2xl rounded-full mx-auto mb-8 flex items-center justify-center border-4 border-[#1a4a31] animate__animated animate__zoomIn"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2917/2917633.png"
+          class="w-20 h-20 object-contain"
+        />
+      </div>
+      <h1 class="text-4xl md:text-7xl text-[#1a4a31] font-bold">
+        The Eden Journal
+      </h1>
+      <p
+        class="mt-4 text-[#c5a059] italic tracking-widest uppercase text-xs md:text-sm"
+      >
+        Blasting Gastronomy & Ethereal Living
+      </p>
+    </section>
+
+    <!-- 2. ARTICLE SECTION: SQUARE PROPORTIONS -->
+    <section class="max-w-7xl mx-auto px-6 space-y-32 pb-24">
+      <!-- Article 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-20">
+        <!-- Square Container for Image -->
+        <div
+          class="eden-img-container shadow-2xl rounded-[3rem] overflow-hidden animate__animated animate__fadeInLeft"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=1200"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div
+          class="w-[85%] md:w-1/2 text-center md:text-left animate__animated animate__fadeInRight"
+        >
+          <span
+            class="text-[#c5a059] font-bold text-xs tracking-widest uppercase"
+            >The Atmosphere</span
+          >
+          <h2 class="text-3xl md:text-5xl text-[#1a4a31] my-4 leading-tight">
+            A Symphony of Verdant Tranquility
+          </h2>
+          <p class="text-gray-500 text-sm md:text-lg leading-relaxed mb-6">
+            Our botanical architecture is a
+            <b>living, breathing testament</b> to opulent tranquility. We have
+            meticulously supplanted the
+            <b>cacophony of modern existence</b> with the rhythmic whispers of
+            waterfalls. Every leaf is curated to provide a sense of seclusion
+            and peace, allowing you to reconnect with nature in its purest form.
+            The air here is different—crisper, cleaner, and filled with the
+            subtle fragrance of blooming jasmine and wet earth. It is not just a
+            garden; it is a sanctuary where time slows down, and the soul finds
+            its rhythm once again.
+          </p>
+        </div>
+      </div>
+
+      <!-- Article 2: Reversed -->
+      <div
+        class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20"
+      >
+        <div
+          class="w-[85%] md:w-1/2 text-center md:text-left animate__animated animate__fadeInLeft"
+        >
+          <span
+            class="text-[#c5a059] font-bold text-xs tracking-widest uppercase"
+            >Epicurean Alchemy</span
+          >
+          <h2 class="text-3xl md:text-5xl text-[#1a4a31] my-4 leading-tight">
+            Gastronomy of the Fertile Soils
+          </h2>
+          <p class="text-gray-500 text-sm md:text-lg leading-relaxed mb-6">
+            Dining at Eden is a <b>sophisticated odyssey</b>. We harmonize
+            ancestral flavors with <b>avant-garde techniques</b> to orchestrate
+            a symphony of gastronomic delight. Our chefs source ingredients
+            directly from our organic gardens, ensuring that every dish bursts
+            with freshness and vitality. From the delicate plating to the
+            complex layering of spices, each meal is designed to be an event, a
+            celebration of life and the bountiful gifts of the earth.
+          </p>
+        </div>
+
+        <!-- Square Container for Image -->
+        <div
+          class="eden-img-container shadow-2xl rounded-[3rem] overflow-hidden animate__animated animate__fadeInRight"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SMOOTH RESPONSIVE CAROUSEL -->
+    <section class="bg-[#1a4a31] py-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-10 mb-12">
+        <h2 class="text-4xl font-serif text-white">Visions of Paradise</h2>
+        <p class="text-[#c5a059] italic">Smooth. Aesthetic. Ethereal.</p>
+      </div>
+
+      <div class="swiper journalSwiper w-full px-10">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide !w-[300px] md:!w-[600px]">
+            <div
+              class="aspect-square md:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl relative group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800"
+                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-black/30"></div>
+              <p class="absolute bottom-6 left-6 text-white font-bold text-xl">
+                Azure Solace
+              </p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="swiper-slide !w-[300px] md:!w-[600px]">
+            <div
+              class="aspect-square md:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl relative group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1540555700478-4be289fbecee?auto=format&fit=crop&w=800"
+                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-black/30"></div>
+              <p class="absolute bottom-6 left-6 text-white font-bold text-xl">
+                The Lotus Lounge
+              </p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="swiper-slide !w-[300px] md:!w-[600px]">
+            <div
+              class="aspect-square md:aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl relative group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1551882547-ff43c63fedfe?auto=format&fit=crop&w=800"
+                class="w-full h-full object-cover transition duration-1000 group-hover:scale-110"
+              />
+              <div class="absolute inset-0 bg-black/30"></div>
+              <p class="absolute bottom-6 left-6 text-white font-bold text-xl">
+                Seraphic Mornings
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. LANDSCAPE MAP SECTION -->
+    <section class="py-24 flex flex-col items-center text-center">
+      <h2 class="text-4xl text-[#1a4a31] font-bold mb-4">Find Your Way Home</h2>
+      <p class="text-gray-400 mb-12 text-sm px-6">
+        No. 1 Eden Boulevard, Paradise Gardens, Serenity State.
+      </p>
+
+      <!-- MAP FORCED TO LANDSCAPE -->
+      <div
+        class="map-landscape shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] border-[10px] md:border-[20px] border-white rounded-[3rem] overflow-hidden"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7285601234!2d3.379!3d6.45!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e831e7ad362!2sLagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1625680000000!5m2!1sen!2sng"
+          class="w-full h-full grayscale"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Garden of Eden. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Swiper Logic -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var swiper = new Swiper(".journalSwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        initialSlide: 1,
+        speed: 1000,
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 300,
+          modifier: 1,
+          scale: 0.75,
+          slideShadows: false,
+        },
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+  </body>
+</html>
