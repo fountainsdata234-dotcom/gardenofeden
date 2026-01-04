@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facilities | Garden of Eden</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #1a4a31;
+        --gold: #c5a059;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #fdfdfb;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .facility-card {
+        border-radius: 3rem;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        /* Ensured clear opacity by default */
+        opacity: 1 !important;
+      }
+
+      .reserve-banner {
+        background: linear-gradient(to right, #1a4a31, #2d5a42);
+        color: white;
+        padding: 1.5rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        box-shadow: 0 10px 25px rgba(26, 74, 49, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Navbar -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav-container">
+          <!-- Logo -->
+          <a href="index.html" class="logo">
+            <img
+              src="image.jpg"
+              alt="Garden of Eden Logo"
+              style="
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+              "
+            />
+          </a>
+
+          <!-- Hamburger (Mobile Only) -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <!-- Menu (Links + Actions) -->
+          <div class="nav-menu">
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="room.html" class="nav-link">Rooms</a></li>
+              <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+              <li>
+                <a href="facilities.html" class="nav-link active">Facilities</a>
+              </li>
+            </ul>
+
+            <!-- Actions -->
+            <button id="theme-toggle" class="theme-toggle">
+              <i class="fas fa-sun"></i>
+              <i class="fas fa-moon"></i>
+            </button>
+            <a href="book.html" class="nav-book-btn">Book Now</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="relative h-[50vh] flex items-center justify-center">
+      <img
+        src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600"
+        class="absolute inset-0 w-full h-full object-cover brightness-[0.4]"
+      />
+      <div
+        class="relative text-center text-white animate__animated animate__fadeIn"
+      >
+        <h1 class="text-5xl md:text-7xl font-bold">Resort Facilities</h1>
+        <p class="text-gold italic tracking-[0.3em] uppercase text-xs mt-4">
+          Pure Bliss, Artfully Crafted
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. PRE-HALL CONTACT INFO -->
+    <div class="max-w-4xl mx-auto px-6 mt-12">
+      <div
+        class="reserve-banner text-center animate__animated animate__pulse animate__infinite"
+      >
+        <p>
+          To reserve any of our exquisite halls, please contact our concierge:
+          <br class="md:hidden" />
+          <span class="text-gold ml-2 underline underline-offset-4"
+            >+234 802 977 2375</span
+          >
+          or
+          <span class="text-gold ml-1 italic">fountainsdata234@gmail.com</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 4. THE HALLS SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-6xl text-[#1a4a31] mb-4 font-bold">
+          The Assemblage
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto italic text-sm">
+          Where grand visions and corporate strategy find their sacred ground.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Hall 1: Grand Ballroom -->
+        <div class="facility-card">
+          <div class="h-64 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800"
+              class="w-full h-full object-cover transition duration-700 hover:scale-110"
+            />
+            <div
+              class="absolute top-4 right-4 bg-white px-4 py-1 rounded-full text-[10px] font-bold text-[#1a4a31] shadow-lg"
+            >
+              500 GUESTS
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4 text-[#1a4a31]">
+              The Sovereign Theatre
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              A majestic ballroom designed for high-octane celebrations,
+              concerts, and grand nuptials.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-[9px] font-bold text-gold uppercase tracking-tighter"
+            >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Crystal Lighting</span
+              >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Surround Sound</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Hall 2: Boardroom -->
+        <div class="facility-card">
+          <div class="h-64 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800"
+              class="w-full h-full object-cover transition duration-700 hover:scale-110"
+            />
+            <div
+              class="absolute top-4 right-4 bg-white px-4 py-1 rounded-full text-[10px] font-bold text-[#1a4a31] shadow-lg"
+            >
+              50 GUESTS
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4 text-[#1a4a31]">
+              Strategist's Enclave
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              An intimate, soundproof setting tailored for high-level boardroom
+              meetings and corporate training.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-[9px] font-bold text-gold uppercase tracking-tighter"
+            >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Smart Projectors</span
+              >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Ergonomic Seats</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Hall 3: Pavilion -->
+        <div class="facility-card">
+          <div class="h-64 overflow-hidden relative">
+            <img
+              src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800"
+              class="w-full h-full object-cover transition duration-700 hover:scale-110"
+            />
+            <div
+              class="absolute top-4 right-4 bg-white px-4 py-1 rounded-full text-[10px] font-bold text-[#1a4a31] shadow-lg"
+            >
+              250 GUESTS
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold mb-4 text-[#1a4a31]">
+              The Celestial Canopy
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              A semi-outdoor pavilion offering a breezy, natural setting for
+              garden weddings and cocktail receptions.
+            </p>
+            <div
+              class="flex flex-wrap gap-2 text-[9px] font-bold text-gold uppercase tracking-tighter"
+            >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Natural Ventilation</span
+              >
+              <span class="bg-gray-50 px-3 py-1 rounded-full border"
+                >✧ Scenic Views</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SWIMMING POOL -->
+    <section
+      class="max-w-7xl mx-auto px-6 py-20 bg-white rounded-[4rem] shadow-sm"
+    >
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div
+          class="rounded-[3rem] overflow-hidden shadow-2xl h-[400px] md:h-[500px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="p-4 md:p-8">
+          <span
+            class="text-gold font-bold uppercase tracking-[0.3em] text-[10px]"
+            >Wellness & Leisure</span
+          >
+          <h2 class="text-4xl md:text-5xl text-[#1a4a31] my-6 font-bold">
+            Azure Serenity Pool
+          </h2>
+          <p class="text-gray-500 leading-loose text-sm mb-8">
+            Our infinity pool offers a quintessential escape, where the azure
+            waters meet the lush greenery of Eden. A perfect sanctuary for your
+            morning laps or an evening of total relaxation.
+          </p>
+          <div
+            class="text-[10px] font-bold border-l-4 border-gold pl-4 text-gray-400"
+          >
+            DAILY: 6:00 AM — 9:00 PM
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. THE BAR -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1 p-4 md:p-8">
+          <span
+            class="text-gold font-bold uppercase tracking-[0.3em] text-[10px]"
+            >Mixology & Vibe</span
+          >
+          <h2 class="text-4xl md:text-5xl text-[#1a4a31] my-6 font-bold">
+            The Gilded Nectar Bar
+          </h2>
+          <p class="text-gray-500 leading-loose text-sm mb-8">
+            Indulge in an epicurean journey through our artisanal cocktails and
+            vintage collection. With a mood set by jazz and sophisticated décor,
+            the Gilded Nectar is where the night truly begins.
+          </p>
+          <button
+            class="px-10 py-4 bg-[#1a4a31] text-white rounded-full text-[10px] font-bold tracking-widest uppercase shadow-xl transition hover:bg-[#2d5a42]"
+          >
+            Explore Spirits Menu
+          </button>
+        </div>
+        <div
+          class="order-1 md:order-2 rounded-[3rem] overflow-hidden shadow-2xl h-[400px] md:h-[500px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1200"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. POST-BAR CONTACT INFO -->
+    <div class="max-w-4xl mx-auto px-6 mb-24">
+      <div class="reserve-banner text-center">
+        <p class="mb-2">
+          To reserve a table or book any facility for private events, please
+          contact:
+        </p>
+        <div class="text-xl font-bold text-gold">
+          <i class="fa fa-phone mr-2"></i> +234 802 977 2375
+        </div>
+        <p class="text-[10px] mt-2 opacity-60">fountainsdata234@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Professional Footer -->
+    <footer class="footer-pro">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img
+              src="image.jpg"
+              alt="Logo"
+              style="
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+              "
+            />
+            <span
+              style="
+                color: #c5a880;
+                font-size: 1.2rem;
+                margin-left: 10px;
+                font-weight: bold;
+              "
+              >Garden of Eden</span
+            >
+          </a>
+          <p>
+            A sanctuary of luxury and peace. Experience the divine touch of
+            nature blended with modern elegance.
+          </p>
+        </div>
+        <div class="footer-col footer-links-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="room.html">Rooms & Suites</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facilities.html">Facilities</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <i class="fas fa-map-marker-alt"></i> No. 1 Eden Boulevard, Paradise
+            Gardens
+          </p>
+          <p><i class="fas fa-phone"></i> +234 802 977 2375</p>
+          <p><i class="fas fa-envelope"></i> info@gardenofeden.com</p>
+        </div>
+        <div class="footer-col footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2025 Garden of Eden. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // Smoother GSAP registration
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Subtle reveal for all cards/sections without affecting opacity negatively
+      const animElements = document.querySelectorAll(".facility-card, section");
+      animElements.forEach((el) => {
+        gsap.from(el, {
+          y: 30,
+          duration: 1,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
